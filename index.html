@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Planner</title>
+</head>
+<body>
+    <header></header>
+<main>
+    <section class="root">
+        <div class="container">
+            <img class="logo" src="https://static.tildacdn.com/tild3738-3034-4338-b963-656664313264/-02_small.png">
+            <h1>Планировщик задач</h1>
+            <p class="title">Добавить задачу</p>
+            <div class="task-manager">
+    <input class="task-manager__task" placeholder="Новая задача" type="text">
+    <button class="task-manager__btn">Добавить</button>
+            </div>
+            <p class="title">Список задач</p>
+            <div class="todo-list">
+                <h2 class="todo-list__title">Нет задач</h2>
+    <div class="todo-list_tasks">
+        <div class="todo-list__items" hidden></div>
+    </div>
+            </div>
+            <button class="todo-list__clear-btn" disabled>Очистить список задач</button>
+        </div>
+    </section>
+</main>
+<footer></footer>
+    <script src="index.js"></script>
+</body>
+</html>
