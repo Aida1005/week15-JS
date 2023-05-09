@@ -2,9 +2,8 @@
 const addTask = document.querySelector('.task-manager__task');//Поле ввода для задачи
 const addBtn = document.querySelector('.task-manager__btn');//Кнопка "Добавить"
 const noTask = document.querySelector('.todo-list__title');//Текст "Нет задач"
-const toDoTask = document.querySelector('.todo-list__item');//Поле для отображения задач
 const clearBtn = document.querySelector('.todo-list__clear-btn');//Кнопка "Очистить список задач"
-const tasksList = document.querySelector('.todo-list__items');
+const tasksList = document.querySelector('.todo-list__items');//Блок для отображения задач
 
 
 
@@ -26,17 +25,16 @@ const taskHTML =
     </div>   
 `;
 
-
 //Убираем надпись "Нет задач"
-noTask.remove();
+noTask.style.display = "none";
 
 //Показать кнопку "Очистить список задач" активной
-document.querySelector('.todo-list__clear-btn').removeAttribute('disabled');
-
-
+clearBtn.removeAttribute("disabled");
 
 //Показать новые задачи в блоке "список задач"
-document.querySelector('.todo-list__items').removeAttribute('hidden');
+tasksList.style.display = "block";
+/*document.querySelector('.todo-list__items').removeAttribute('hidden');*/
+
 
 //Добавляем задачу на страницу 
 tasksList.insertAdjacentHTML('beforeend', taskHTML);
@@ -49,24 +47,17 @@ addTask.focus();
 
 //Создаём функцию для кнопки "Очистить список задач"
 clearBtn.addEventListener('click', ()=>{
-    tasksList.remove();//Очищаем поле
+    tasksList.innerHTML = "";//Очищаем поле
 
 // Добавляем надпись "Нет задач"
-const toDoTaskBox = document.querySelector('.todo-list');
-toDoTaskBox.innerHTML = `<h2 class="todo-list__title">Нет задач</h2>`;
+noTask.style.display = "block";
+/*const toDoTaskBox = document.querySelector('.todo-list');
+toDoTaskBox.innerHTML = `<h2 class="todo-list__title">Нет задач</h2>`;*/
 
 //Показать кнопку "Очистить список задач" неактивной
-clearBtn.setAttribute("disabled", " ");
+clearBtn.setAttribute("disabled", true);
+
+//Показать блок "список задач" скрытым
+tasksList.style.display = "none";
 
 })
-
-
-
-
-
-
-
-
-
-
-
