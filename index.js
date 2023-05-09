@@ -47,7 +47,7 @@ addTask.focus();
 
 //Создаём функцию для кнопки "Очистить список задач"
 clearBtn.addEventListener('click', ()=>{
-    tasksList.innerHTML = "";//Очищаем поле
+    tasksList.innerHTML = "";
 
 // Добавляем надпись "Нет задач"
 noTask.style.display = "block";
