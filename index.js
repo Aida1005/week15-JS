@@ -51,8 +51,6 @@ clearBtn.addEventListener('click', ()=>{
 
 // Добавляем надпись "Нет задач"
 noTask.style.display = "block";
-/*const toDoTaskBox = document.querySelector('.todo-list');
-toDoTaskBox.innerHTML = `<h2 class="todo-list__title">Нет задач</h2>`;*/
 
 //Показать кнопку "Очистить список задач" неактивной
 clearBtn.setAttribute("disabled", true);
